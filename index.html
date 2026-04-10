@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Aléatoire</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: #ff7eb3;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff4f81;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🚀 Bienvenue !</h1>
+    <p>Une page web générée aléatoirement</p>
+</header>
+
+<div class="card">
+    <h2 id="randomTitle">Titre aléatoire</h2>
+    <p id="randomText">Clique pour générer du contenu !</p>
+    <button onclick="generateContent()">Générer</button>
+</div>
+
+<footer>
+    <p>© 2026 - Projet Web</p>
+</footer>
+
+<script>
+    const titles = [
+        "💡 Idée brillante",
+        "🔥 Incroyable contenu",
+        "🌍 Monde digital",
+        "⚡ Innovation rapide",
+        "🎯 Objectif atteint"
+    ];
+
+    const texts = [
+        "Le succès commence avec une simple idée.",
+        "Le code est la clé du futur.",
+        "Chaque jour est une nouvelle opportunité.",
+        "Apprendre à coder change la vie.",
+        "L'innovation ne dort jamais."
+    ];
+
+    function generateContent() {
+        const randomTitle = titles[Math.floor(Math.random() * titles.length)];
+        const randomText = texts[Math.floor(Math.random() * texts.length)];
+
+        document.getElementById("randomTitle").innerText = randomTitle;
+        document.getElementById("randomText").innerText = randomText;
+    }
+</script>
+
+</body>
+</html>
