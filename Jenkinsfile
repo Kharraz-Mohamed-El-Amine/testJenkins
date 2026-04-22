@@ -1,9 +1,9 @@
 pipeline {
-    agent any [cite: 26, 27]
+    agent any
     stages {
-        stage('Hello') { 
+        stage('Hello') {
             steps {
-                echo 'Bonjour Med Amin, Jenkins est operationnel !' [cite: 30, 35]
+                echo 'Bonjour Med Amin, Jenkins est operationnel !'
             }
         }
     }
